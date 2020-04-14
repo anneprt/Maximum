@@ -1,6 +1,5 @@
 package fr.abp.cours;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -18,12 +17,16 @@ public class Main {
         if (premiere > deuxieme) {
             System.out.println(premiere + " " + deuxieme);
             laPlusGrande = premiere;
+            System.out.println("la plus grande valeur est :" + laPlusGrande);
         } else {
-            System.out.println(premiere + " " + deuxieme);
-            laPlusGrande = deuxieme;
+            if (deuxieme > premiere) {
+                System.out.println(premiere + " " + deuxieme);
+                laPlusGrande = deuxieme;
+                System.out.println("la plus grande valeur est :" + laPlusGrande);
+            } else {
+                System.out.println("Les 2 valeurs sont identiques !");
+            }
         }
-        System.out.println("la plus grande valeur est :" + laPlusGrande);
-
     }
 }
 
